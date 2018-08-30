@@ -1,0 +1,41 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="主键" value="${item.id}" underline="true"/>
+                            <#input id="number" name="商品编号，UUID生成，唯一" value="${item.number}" underline="true"/>
+                            <#input id="name" name="商品名称" value="${item.name}" underline="true"/>
+                            <#input id="price" name="价格" value="${item.price}" underline="true"/>
+                            <#input id="productdate" name="生产日期" value="${item.productdate}" underline="true"/>
+                            <#input id="expirationdate" name="保质期  单位：天" value="${item.expirationdate}" underline="true"/>
+                            <#input id="stock" name="库存" value="${item.stock}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="unit" name="单位" value="${item.unit}" underline="true"/>
+                            <#input id="status" name="状态：1.上架  2.下架" value="${item.status}" underline="true"/>
+                            <#input id="addtime" name="添加时间" value="${item.addtime}" underline="true"/>
+                            <#input id="updatetime" name="最后更新时间" value="${item.updatetime}" underline="true"/>
+                            <#input id="addperson" name="添加人" value="${item.addperson}" underline="true"/>
+                            <#input id="description" name="描述" value="${item.description}" underline="true"/>
+                            <#input id="remark" name="备注" value="${item.remark}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="FoodInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="FoodInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/food/food_info.js"></script>
+@}

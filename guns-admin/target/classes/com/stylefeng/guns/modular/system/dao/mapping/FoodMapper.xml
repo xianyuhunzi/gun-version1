@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.FoodMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.Food">
+        <id column="ID" property="id" />
+        <result column="NUMBER" property="number" />
+        <result column="NAME" property="name" />
+        <result column="PRICE" property="price" />
+        <result column="PRODUCTDATE" property="productdate" />
+        <result column="EXPIRATIONDATE" property="expirationdate" />
+        <result column="STOCK" property="stock" />
+        <result column="UNIT" property="unit" />
+        <result column="STATUS" property="status" />
+        <result column="ADDTIME" property="addtime" />
+        <result column="UPDATETIME" property="updatetime" />
+        <result column="ADDPERSON" property="addperson" />
+        <result column="DESCRIPTION" property="description" />
+        <result column="REMARK" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID AS id, NUMBER AS number, NAME AS name, PRICE AS price, PRODUCTDATE AS productdate, EXPIRATIONDATE AS expirationdate, STOCK AS stock, UNIT AS unit, STATUS AS status, ADDTIME AS addtime, UPDATETIME AS updatetime, ADDPERSON AS addperson, DESCRIPTION AS description, REMARK AS remark
+    </sql>
+    <!--<select id="selectFood" resultMap="BaseResultMap">-->
+        <!--　　 SELECT * FROM food ${ew.sqlSegment}-->
+    <!--</select>-->
+</mapper>

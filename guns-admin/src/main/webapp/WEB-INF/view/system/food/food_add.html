@@ -1,0 +1,41 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="主键" underline="true"/>
+                            <#input id="number" name="商品编号，UUID生成，唯一" underline="true"/>
+                            <#input id="name" name="商品名称" underline="true"/>
+                            <#input id="price" name="价格" underline="true"/>
+                            <#input id="productdate" name="生产日期" underline="true"/>
+                            <#input id="expirationdate" name="保质期  单位：天" underline="true"/>
+                            <#input id="stock" name="库存"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="unit" name="单位" underline="true"/>
+                            <#input id="status" name="状态：1.上架  2.下架" underline="true"/>
+                            <#input id="addtime" name="添加时间" underline="true"/>
+                            <#input id="updatetime" name="最后更新时间" underline="true"/>
+                            <#input id="addperson" name="添加人" underline="true"/>
+                            <#input id="description" name="描述" underline="true"/>
+                            <#input id="remark" name="备注" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="FoodInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="FoodInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/food/food_info.js"></script>
+@}
